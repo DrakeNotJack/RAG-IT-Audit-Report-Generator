@@ -1,0 +1,152 @@
+ITGC Standards: Change Management
+
+Document ID: ITGC-CM-2025-V1.0
+
+Effective Date: 2025-01-30
+
+Applicable Scope: All changes to IT applications, databases, infrastructure (servers, networks), cloud services, and production environments
+
+Reference Standards: ISO 27001:2022 Annex A.12, COBIT 5 DSS03
+
+Module: Change Management
+
+This module defines the IT General Controls (ITGC) for managing changes to IT systems and environments. Effective change management minimizes the risk of system outages, data corruption, and unauthorized modifications, while ensuring changes support business objectives and comply with regulatory requirements. The controls apply to all change types, including normal, emergency, and standard changes.
+
+1. Control Objectives
+
+The following control objectives establish the core governance requirements for change management, providing a framework for audit evaluation:
+
+Control Objective 1: All changes to applications, databases, and infrastructure are authorized, tested, and approved prior to implementation in the production environment.
+
+Rationale: Pre-implementation authorization, testing, and approval ensure that changes are necessary, technically sound, and do not introduce security vulnerabilities or operational risks. This control prevents untested or unauthorized changes from disrupting business operations.
+
+Key Testing Requirements: Changes must undergo functional testing (to verify intended functionality), integration testing (to ensure compatibility with existing systems), and security testing (to identify vulnerabilities) prior to approval.
+
+Control Objective 2: Changes are documented and tracked through a formal change request system, ensuring accountability and traceability.
+
+Rationale: A centralized change request system (CRS) provides a complete audit trail of all change activities, enabling organizations to track changes from initiation to implementation. This supports incident investigation, compliance reporting, and change impact analysis.
+
+Mandatory Change Documentation: 
+    Change request (CR) number and titleBusiness justification and impacted systemsChange owner and implementation timelineTesting results and sign-offApproval signatures and implementation verification
+
+Control Objective 3: Emergency changes are controlled, reviewed, and retrospectively approved to ensure they do not bypass standard governance.
+
+Rationale: Emergency changes (e.g., fixes for critical system outages) require rapid implementation but must still be governed to prevent unauthorized modifications. Retrospective approval ensures that emergency changes are justified and documented after the fact.
+
+Emergency Change Requirements:
+    Immediate verbal approval from the Change Advisory Board (CAB) chair or designated emergency approverDocumentation of the emergency reason and business impact if the change is delayedRetrospective formal approval and full documentation within 24-48 hours of implementationPost-implementation review to identify opportunities for process improvement
+
+Control Objective 4: Segregation of duties is maintained, ensuring developers cannot directly implement changes into production without independent review.
+
+Rationale: Separating development and production access prevents unauthorized or untested changes from being deployed directly to production, reducing the risk of fraud, data corruption, and system failures. This control enforces an independent review process for all changes.
+
+Key SoD Requirements:
+    Developers have no direct access to production environments (read or write)Changes are deployed to production by an independent Deployment Team or via automated tools (CI/CD pipelines with approval gates)The CAB or designated approver reviews and approves changes independently of the development team
+
+2. Testing Procedures (Audit Execution Guidelines)
+
+The following procedures are designed to assess the effectiveness of the client's change management controls. Sample sizes should be adjusted based on the volume of changes (e.g., 15-20 samples for high-change environments).
+
+1. Policy and System ReviewInspect the client's change management policy and procedures to verify alignment with the control objectives
+
+2. Evaluate the formal change request system (e.g., ServiceNow, Jira) to confirm it captures all mandatory documentation fields
+
+3. Review the Change Advisory Board (CAB) charter to verify membership (includes IT, business, and security representatives) and meeting frequency
+
+4. Change Workflow WalkthroughConduct a walkthrough of the standard change workflow with the Change Manager and a developer
+
+5. Map the workflow from CR initiation to testing, approval, deployment, and post-implementation review
+
+6. Identify any bypass points or informal processes (e.g., "backdoor" production access for developers)
+
+7. Sample Testing - Normal ChangesSelect a random sample of 15-20 normal changes implemented in the past 3 months (prioritize changes to critical systems)
+
+8. For each sample, verify the following:
+            Complete documentation in the change request system (business justification, impacted systems, timeline)
+
+9. Evidence of functional, integration, and security testing (test plans, results, sign-off)
+
+10. Approval from the CAB or designated approver prior to deployment
+
+11. Post-implementation verification (e.g., user acceptance testing, system health checks)
+
+12. Document instances of untested changes, missing approvals, or incomplete documentation
+
+13. Sample Testing - Emergency ChangesSelect a random sample of 5-10 emergency changes from the past 3 months
+
+14. For each sample, verify the following:
+            Documented reason for emergency (e.g., system outage, security breach)
+
+15. Evidence of immediate verbal approval (e.g., call logs, email confirmation)
+
+16. Retrospective formal approval and complete documentation within the required timeframe
+
+17. Post-implementation review to assess change effectiveness and prevent future emergencies
+
+18. Check if emergency changes are being used as a workaround for normal change processes (indicator of policy non-compliance)
+
+19. Segregation of Duties (SoD) TestingObtain a list of developers and their access rights to production environments
+
+20. Verify that developers have no direct production access (use access logs and permission reports)
+
+21. Select a sample of 5-8 recent production deployments and confirm they were performed by the independent Deployment Team
+
+22. Evaluate CI/CD pipelines (if used) to ensure approval gates are in place before production deployment
+
+23. Change Failure AnalysisObtain the client's change failure rate metrics (percentage of changes that result in incidents)
+
+24. Select a sample of failed changes and analyze root causes (e.g., inadequate testing, missing approvals)
+
+25. Verify that the client implements corrective actions for recurring failure patterns
+
+3. Audit Evidence Requirements
+
+Auditors should collect the following evidence to support their assessment of change management controls:
+
+- Change Management Policy, procedure documents, and CAB charter
+
+- Sample change requests from the change management system (normal and emergency)
+
+- Testing documentation (test plans, results, sign-off forms)
+
+- CAB meeting minutes and approval records
+
+- Production access permission reports for developers and deployment teams
+
+- Change failure rate metrics and post-implementation review records
+
+- Emergency change documentation (verbal approval records, retrospective approvals)
+
+4. Risk Mitigation Guidance
+
+Common change management deficiencies and recommended mitigation strategies:
+
+Deficiency
+
+Risk
+
+Mitigation
+
+Developers have direct production access
+
+Unauthorized changes, data corruption, fraud
+
+Implement role-based access control (RBAC) to restrict production access; use automated deployment tools
+
+Incomplete emergency change documentation
+
+Untraceable changes, compliance violations
+
+Enforce mandatory emergency change templates and automated reminders for retrospective approval
+
+Lack of post-implementation testing
+
+Undetected defects, system outages
+
+Require mandatory user acceptance testing (UAT) and system health checks within 24 hours of deployment
+
+CAB approvals are rubber-stamped
+
+Untested or unnecessary changes are deployed
+
+Provide CAB members with training on change assessment; require detailed testing summaries for review

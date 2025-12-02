@@ -1,0 +1,200 @@
+ABC Manufacturing Corporation IT General Controls Policy
+Document Version: 1.0
+Effective Date: [Insert Date]
+
+Approved By: [Insert CIO/IT Director Name]
+
+Applicable To: All ABC Manufacturing employees, contractors, temporary staff, and third-party vendors accessing corporate IT systems
+
+1. Policy Purpose and Scope
+
+1.1 Purpose: This IT General Controls (ITGC) Policy establishes standardized governance requirements for managing access to information systems, controlling IT changes, and safeguarding data through backup processes at ABC Manufacturing. It aims to ensure the confidentiality, integrity, and availability of corporate IT assets, support compliance with regulatory obligations (e.g., ISO 9001, industry-specific data protection standards), and mitigate IT-related risks.
+
+1.2 Scope: This policy applies to all corporate IT systems, including but not limited to enterprise resource planning (ERP) software, manufacturing execution systems (MES), customer relationship management (CRM) tools, network infrastructure, cloud services, servers, endpoints, and the data stored or processed within these systems. It governs all IT-related activities conducted by internal and external personnel acting on behalf of ABC Manufacturing.
+
+2. Access Management Policy
+
+This section defines the requirements for managing the entire lifecycle of user access to ABC Manufacturing’s IT systems, adhering to the Principle of Least Privilege and ensuring accountability for all access-related activities.
+
+2.1 Roles and Responsibilities
+
+- Human Resources (HR) Department: Initiates access requests for new hires; provides timely notification of employee terminations, transfers, or role changes to IT and department managers.
+
+- Department Managers: Submits access requests for existing staff (e.g., role expansions); approves access requests for team members; conducts annual access reviews; verifies access requirements align with job responsibilities.
+
+- IT Department: Provisions, modifies, and revokes user access; maintains predefined role-based access control (RBAC) profiles; maintains access logs and audit trails; supports department managers in access review activities.
+
+- End Users: Responsible for safeguarding their credentials; reporting unauthorized access attempts or credential compromise to IT immediately; adhering to access restrictions defined by their role.
+
+2.2 Access Provisioning Process
+
+1. All new user access requests must be submitted via the corporate IT Service Management (ITSM) portal by HR (for new hires) or the relevant department manager (for existing staff).
+
+2. Access requests must include the requester’s name, job title, department, required systems, and business justification for access.
+
+3. Department managers must review and approve all access requests prior to IT provisioning. For access to sensitive systems (e.g., financial ERP modules), additional approval from the system owner is required.
+
+4. IT administrators shall provision access exclusively based on predefined RBAC profiles, ensuring users receive only the minimum permissions necessary to perform their job functions.
+
+5. Upon provisioning, IT shall send a formal notification to the user, including credential setup instructions and a reminder of password security requirements.
+
+2.3 Access Modification and Revocation
+
+- Access modifications (e.g., role changes, permission expansions) require a new access request and approval process, following the same steps outlined in Section 2.2.
+
+- HR shall notify IT and the relevant department manager within 4 hours of an employee’s termination, resignation, or extended leave (exceeding 10 business days).
+
+- IT shall disable all user accounts and access rights (including network access, system logins, and cloud permissions) for terminated or extended-leave employees within 24 hours of receiving notification.
+
+- For employees transferring between departments, IT shall adjust access rights to align with the new role within 3 business days of receiving the approved transfer request.
+
+2.4 Access Review Requirements
+
+Department managers shall conduct annual access reviews for all team members by the last business day of December each year. Reviews must:
+    Verify that current access rights align with the employee’s current job responsibilities;Identify and document any redundant, stale, or unauthorized permissions;Initiate access revocation requests for invalid permissions via the ITSM portal;Submit a signed access review summary to the IT Department and Internal Audit Team for record-keeping.
+
+The IT Department shall conduct a bi-annual cross-verification of access reviews for critical systems (ERP, MES) to ensure completeness and accuracy.
+
+3. Change Management Policy
+
+This section establishes requirements for managing changes to ABC Manufacturing’s IT systems and infrastructure, ensuring changes are authorized, tested, and controlled to minimize operational disruption and security risks.
+
+3.1 Roles and Responsibilities
+
+- Change Requester: Submits change requests (CRs) via the Change Management System (CMS); provides business justification and impact assessment.
+
+- Change Owner: Oversees change planning, testing, and implementation; approves CRs; ensures compliance with this policy.
+
+- IT Development/Infrastructure Teams: Designs, develops, and tests changes; provides technical documentation for CRs.
+
+- IT Operations Team: Deploys approved changes to production environments; performs post-implementation verification.
+
+- Change Advisory Board (CAB): Reviews high-risk changes (e.g., changes to core ERP systems); provides additional oversight for complex changes.
+
+3.2 Standard Change Process
+
+1. All changes (including software updates, configuration modifications, and infrastructure changes) must be logged in the corporate CMS prior to any work being performed.
+
+2. Each CR must include: change description, business justification, impacted systems, implementation timeline, testing plan, rollback plan, and risk assessment.
+
+3. Changes must undergo formal testing (functional, integration, and user acceptance testing as applicable) prior to approval. Testing results must be documented in the CMS.
+
+4. The change owner must review and approve the CR. High-risk changes require additional CAB approval.
+
+5. IT Operations shall deploy approved changes during scheduled maintenance windows (unless otherwise approved by the CAB for business-critical changes).
+
+6. Post-implementation verification (e.g., system health checks, user feedback) must be completed within 24 hours of deployment, with results documented in the CMS.
+
+3.3 Emergency Change Process
+
+Emergency changes (defined as changes required to resolve critical system outages, security breaches, or prevent significant business disruption) may bypass the standard approval process but must adhere to the following:
+    Emergency changes require immediate verbal approval from the IT Director or on-call CAB representative.A CR must be created in the CMS within 2 hours of initiating the emergency change, including documentation of the emergency justification and business impact.The change owner must conduct a retrospective review of the emergency change within 3 business days, including validation of testing (if applicable) and rollback procedures.Formal retrospective approval must be obtained from the CAB within 5 business days of the emergency change implementation.
+
+3.4 Segregation of Duties (SoD)
+
+To maintain SoD and prevent unauthorized changes:
+    Software developers and system designers are prohibited from deploying changes directly to production environments. All production deployments must be performed by the IT Operations Team.No individual shall be responsible for both initiating and approving a change (except for low-risk standard changes pre-approved by the CAB).IT shall conduct quarterly SoD reviews for all roles involved in the change management process to identify and resolve conflicts.
+
+4. Backup Management Policy
+
+This section defines requirements for backing up ABC Manufacturing’s IT data and systems, ensuring data recoverability in the event of system failure, data corruption, natural disaster, or cyberattack.
+
+4.1 Roles and Responsibilities
+
+- IT Data Management Team: Develops and maintains backup schedules; configures backup systems; tests backup recoverability; stores backup media securely.
+
+- System Owners: Identifies critical data and systems under their purview; defines recovery point objectives (RPOs) and recovery time objectives (RTOs) for their systems.
+
+- IT Operations Team: Monitors backup jobs for success/failure; initiates corrective action for failed backups; maintains backup logs.
+
+- Internal Audit Team: Reviews backup processes and recoverability tests annually to ensure compliance with this policy.
+
+4.2 Backup Requirements
+
+Data/System Category
+
+Backup Frequency
+
+RPO
+
+RTO
+
+Backup Type
+
+Critical Systems (ERP, MES, Financial Systems)
+
+Daily full backups; hourly incremental backups
+
+1 hour
+
+4 hours
+
+On-premises + off-site cloud backup
+
+Business Systems (CRM, HRIS)
+
+Daily full backups; 4-hour incremental backups
+
+4 hours
+
+8 hours
+
+On-premises + off-site cloud backup
+
+User Data (File Servers, Endpoints)
+
+Daily full backups
+
+24 hours
+
+24 hours
+
+On-premises backup
+
+4.3 Backup Storage and Security
+
+- Off-site backups must be stored in a geographically separate location (minimum 50 miles from the primary facility) to mitigate regional disaster risks.
+
+- All backups (on-premises and off-site) must be encrypted at rest and in transit using industry-standard encryption protocols (e.g., AES-256).
+
+- Backup media and cloud backup accounts must be protected with multi-factor authentication (MFA) and restricted access based on RBAC profiles.
+
+- Backup retention periods shall comply with regulatory requirements: critical system backups retained for 1 year; user data backups retained for 6 months.
+
+4.4 Backup Testing and Validation
+
+- The IT Data Management Team shall perform monthly test recoveries for critical systems to verify backup integrity and adherence to RTOs/RPOs.
+
+- Annual full-scale disaster recovery drills shall be conducted, involving key stakeholders from IT, operations, and business departments.
+
+- Test results, including any gaps or remediation actions, must be documented and submitted to the IT Director and Internal Audit Team.
+
+- Failed backups must be resolved within 2 hours of detection, with root cause analysis documented for recurring issues.
+
+5. Policy Compliance and Enforcement
+
+5.1 Compliance Monitoring
+
+The IT Department and Internal Audit Team shall conduct quarterly compliance reviews of this policy, including:
+    Audits of access logs, CRs, and backup records;Verification of access review completion;Assessment of change management process adherence;Validation of backup recoverability test results.
+
+5.2 Violations and Penalties
+
+Violations of this policy may result in disciplinary action, up to and including termination of employment or vendor contracts, depending on the severity of the violation and associated business impact. Examples of violations include:
+    Provisioning access without proper approval;Failing to revoke access for terminated employees within the required timeframe;Deploying unapproved changes to production;Bypassing backup requirements or tampering with backup systems.
+
+5.3 Policy Updates
+
+This policy shall be reviewed and updated annually by the IT Department, in consultation with the Internal Audit Team and key business stakeholders. Updates shall be communicated to all employees via corporate email, and training shall be provided for material changes.
+
+6. Definitions
+
+- RBAC (Role-Based Access Control): An access control model that assigns permissions based on predefined job roles rather than individual users.
+
+- RPO (Recovery Point Objective): The maximum amount of data loss acceptable after a disruption.
+
+- RTO (Recovery Time Objective): The maximum amount of time allowed to restore a system after a disruption.
+
+- CMS (Change Management System): The centralized system used to log, track, and manage IT change requests.
+
+- SoD (Segregation of Duties): A control that separates conflicting roles to prevent fraud or error.

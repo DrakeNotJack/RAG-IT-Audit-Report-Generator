@@ -1,0 +1,141 @@
+Document ID: ITGC-AC-2025-E-V1.0
+
+Effective Date: January 30, 2025
+
+Applicable Scope: All IT applications, data assets, and user access management processes within the auditee's environment
+
+Reference Standards: ISO 27001:2022 Annex A.9, COBIT 5 DSS05, NIST SP 800-162
+
+Module: Access Control
+
+This module establishes IT General Controls (ITGC) requirements for managing user access to information systems and data assets. It ensures that only authorized individuals gain access to resources based on their job responsibilities, thereby safeguarding data confidentiality, maintaining data integrity, and supporting regulatory compliance (e.g., GDPR, PCI DSS, SOX).
+
+1. Control Objectives
+
+The following control objectives define the core requirements for effective access control, serving as the foundation for audit assessment and control design:
+
+Control Objective 1:
+
+Access to applications and data is restricted to authorized users based on job responsibilities.
+
+Rationale: Implementing the "Principle of Least Privilege" minimizes the risk of unauthorized access, data breaches, and inappropriate data modification. Access rights must be strictly aligned with an individual's role and business needs, excluding any redundant or excessive permissions that could introduce security vulnerabilities.
+
+Key Requirements:
+    Access rights are mapped to specific job roles (Role-Based Access Control, RBAC) rather than individual usersSensitive data (e.g., financial records, customer PII) has additional access restrictions beyond basic role assignmentsUnauthorized access attempts are logged and monitored for security incidents
+
+Control Objective 2:
+
+User access is created, modified, and revoked through a formal process with documented approvals.
+
+Rationale: A standardized access lifecycle process ensures accountability for all access-related activities. Documented approvals provide a clear audit trail to verify that access changes are authorized, justified, and compliant with organizational policies.
+
+Key Requirements:
+    All access provisioning or modification requests require a completed "Access Request Form (ARF)" with business justificationARFs must be approved by the requester’s direct supervisor and department head (or designated authority)Employee termination, role change, or extended leave triggers a formal access revocation/adjustment notification from HR to ITAll access changes are recorded in the IT Access Management System (AMS) with timestamps and approver information
+
+Control Objective 3:
+
+User access is reviewed periodically to confirm continued appropriateness.
+
+Rationale: Regular access reviews ensure that access rights remain relevant as job roles evolve, employees transfer between departments, or business processes change. This control helps identify and remediate stale, orphaned, or unauthorized permissions in a timely manner.
+
+Key Requirements:
+    Quarterly access reviews for critical systems (e.g., financial systems, core business applications)Semi-annual access reviews for non-critical applications and general user accountsAnnual comprehensive access review covering all user accounts across the organizationReview results must be documented and signed off by department heads, with remediation plans for identified issues
+
+2. Testing Procedures
+
+The following procedures are designed to evaluate the effectiveness of access control controls. Audit sample sizes should be adjusted based on the auditee’s organization size, risk profile, and volume of access activities (typically 10-15 samples for medium-sized entities).
+
+1. Policy and Procedure ReviewInspect the auditee’s formal Access Control Policy to verify alignment with the control objectives outlined above
+
+2. Validate that the policy defines clear roles and responsibilities for HR (notification), IT (access management), and business departments (approval and review)
+
+3. Review training records to confirm that employees with system access have completed access control policy training
+
+4. Process WalkthroughConduct a walkthrough of the user provisioning and deprovisioning process with key stakeholders (IT Support, HR Operations, Business Department Representative)
+
+5. Map the end-to-end process from access request initiation to approval, implementation, and post-change verification
+
+6. Identify any informal workarounds (e.g., verbal access requests, delayed revocation notifications) that bypass formal controls
+
+7. Sample Testing - New User ProvisioningSelect a random sample of 10-15 new user accounts created in the past three months
+
+8. For each sample, verify the existence of:
+            A completed and approved Access Request Form (ARF) with clear business justification
+
+9. Signatures or system logs confirming approval by the direct supervisor and department head
+
+10. Evidence that access rights granted align with the user’s job role (e.g., job description attached to ARF)
+
+11. Record of access provisioning in the IT Access Management System
+
+12. Sample Testing - Access RevocationSelect a random sample of 10-15 terminated or transferred employees from the past three months
+
+13. For each sample, obtain the HR termination/transfer notification and IT access revocation records
+
+14. Verify that access rights were revoked or adjusted within the timeframe specified in the Access Control Policy (typically 24-48 hours)
+
+15. Check for evidence of a "Revocation Confirmation Report" submitted to the Internal Audit Department (if required by policy)
+
+16. Sample Testing - Periodic Access ReviewsObtain the most recent access review documentation (e.g., review checklists, sign-off sheets, system-generated review reports)
+
+17. Select a sample of 5-8 departments and verify that access reviews were completed by the required deadline
+
+18. Confirm that redundant or unauthorized permissions identified during the review were remediated within the specified timeframe (typically 5-7 business days)
+
+19. Validate that department heads have signed off on the review results to acknowledge accountability
+
+20. Segregation of Duties (SoD) TestingIdentify critical business processes (e.g., financial transaction initiation and approval, data modification and validation) that require SoD
+
+21. Select a sample of users with roles related to these critical processes
+
+22. Verify that their access rights do not create SoD conflicts (e.g., a user cannot both initiate and approve a payment)
+
+3. Audit Evidence Requirements
+
+Auditors should collect and retain the following evidence to support their findings and conclusions:
+
+- Access Control Policy and related procedure documents
+
+- Sample Access Request Forms (ARFs) and approval records
+
+- HR termination/transfer notifications and IT access revocation logs
+
+- Periodic access review checklists, sign-off forms, and remediation records
+
+- IT Access Management System (AMS) reports and screenshots
+
+- Employee training records for access control policies
+
+- Segregation of Duties (SoD) matrices and conflict reports
+
+4. Common Control Deficiencies and Mitigation
+
+Control Deficiency
+
+Associated Risk
+
+Recommended Mitigation
+
+Delayed access revocation for terminated employees
+
+Unauthorized access to systems and data by former employees
+
+Implement automated integration between HR and IT systems to trigger real-time access revocation
+
+Informal access requests (no documented ARF)
+
+Unaccountable access provisioning and potential unauthorized access
+
+Enforce mandatory use of the IT Access Management System for all access requests; block provisioning without an approved ARF
+
+Incomplete or overdue periodic access reviews
+
+Stale or unauthorized permissions remaining active in the system
+
+Establish automated reminders for department heads; escalate overdue reviews to senior management
+
+Segregation of Duties conflicts
+
+Increased risk of fraud, error, or data manipulation
+
+Implement SoD monitoring tools; conduct quarterly SoD reviews for critical roles

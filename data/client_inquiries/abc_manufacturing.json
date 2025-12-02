@@ -1,0 +1,23 @@
+{
+  "client_name": "ABC Manufacturing",
+  "modules": {
+    "access_management": {
+      "inquiries": {
+        "user_provisioning": "New users are requested through the HR onboarding workflow. The hiring manager submits a ticket specifying the required system access. IT reviews the role requirements and assigns permissions based on predefined role profiles. Manager approval is captured within the ticketing system.",
+        "user_deprovisioning": "HR sends a daily termination list to IT. User accounts are disabled within 24 hours. For voluntary resignations, managers notify HR who then forwards the removal request to IT.",
+        "periodic_review": "Access reviews are conducted annually. Department managers receive exported user lists and confirm if access remains appropriate. Findings are documented and returned to IT for follow-up.",
+        "privileged_access": "Privileged accounts such as system administrators are assigned only to designated IT staff. No periodic review specific to privileged accounts is performed."
+      }
+    },
+    "change_management": {
+      "inquiries": {
+        "change_request_process": "All changes must be logged in the Change Management System (CMS). A change request includes description, impact assessment, testing plan, and rollback plan. Changes are categorized as standard, normal, or emergency.",
+        "approval_process": "Normal changes require approval from the change owner and the IT manager. High-risk changes also require business owner approval. Approval is captured in the CMS.",
+        "testing_process": "Developers perform unit testing and attach test evidence to the ticket. User acceptance testing (UAT) is performed by business users for major changes.",
+        "deployment_process": "IT operations deploy changes to production. Developers do not have direct access to production environments. For emergency changes, deployment can occur immediately, but must be retrospectively approved within 3 business days.",
+        "emergency_changes": "Emergency changes bypass some standard approval steps but must still have testing evidence when feasible. These are reviewed monthly during the Change Advisory Board (CAB) meeting.",
+        "segregation_of_duties": "Developers do not have the ability to deploy directly to production. Deployment privileges are restricted to the IT operations team."
+      }
+    }
+  }
+}
