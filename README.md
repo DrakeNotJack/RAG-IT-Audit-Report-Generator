@@ -5,7 +5,7 @@ Interact via natural language queries, and generate professional audit reports w
 ![LangChain](https://img.shields.io/badge/LangChain-%F0%9F%A6%9C%F0%9F%94%97-orange.svg)
 
 ## 📌 Demo Project Note
-This is a simplified demo for a large-scale IT audit solution, therefore the Ollama local ecosystem (nomic-embed-text for embedding + Qwen 2.5-7B for LLM) is adopted for the following reasons:
+This prototype explores how IT audit workflows can be streamlined using Retrieval-Augmented Generation (RAG). It adopts the Ollama local ecosystem (nomic-embed-text for embeddings and Qwen 2.5-7B for LLM inference) for the following reasons:
 - Local & free deployment: No online API calls, zero cost
 - Low hardware threshold: Runs on consumer-grade GPUs (≥8GB VRAM) or 16GB RAM (CPU inference)
 - Fast iteration: Enables quick verification of the RAG audit pipeline without complex configuration
