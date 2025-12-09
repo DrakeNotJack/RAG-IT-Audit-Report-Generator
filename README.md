@@ -1,4 +1,4 @@
-# 🏢 RAG-powered IT Audit Report Generation System
+# 🏢 RAG-powered IT Audit Report Generator (Prototype)
 Interact via natural language queries, and generate professional audit reports with one click.
 
 ![Python Version](https://img.shields.io/badge/python-3.9+-blue.svg)
