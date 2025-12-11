@@ -98,10 +98,10 @@ RAG for IT Audit/
 ```
 
 ## 🤔 FAQ
-Q: How much RAM is required?
+Q: How much RAM is required?                           
 A: Minimum 16GB RAM recommended. 7B model requires ~8GB, plus system and vector database overhead.
-Q: Can it be extended to other audit domains?
-A: Yes. Simply:
+Q: Can it be extended to other audit domains?                                    
+A: Yes. Simply:                        
 Add the new domain’s standards, policies and client data to the data/ folder (follow the existing structure: standards/, policies/, client_inquiries/);
 Update (or fine-tune) the parsing, retrieval, and report prompt templates as needed.
 
